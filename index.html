@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>2016 Concord Christmas Parade Parking Data</title>
+	<meta name="description" content="Welcome to the 2016 Conocrd NH Christmas Day Parade Parking Assistant!">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<style type="text/css">
+	ul li{
+		font-size: 1.2em;
+		margin-bottom: 10px;
+		border-bottom: 1px solid #cccccc;
+	}
+	.search{
+		padding: 10px 30px;
+		margin: 30px auto 10px auto;
+		width:100%;
+	}
+
+	li {
+		border-top: 1px solid #ddd;
+		padding: 10px;
+	}
+	li:nth-of-type(odd) {
+		background-color: #eee;
+	}
+	.block{
+		display: block;
+	}
+	.margin-auto{
+		margin:0 auto;
+	}
+	button.close{
+		font-size: 3em;
+		line-height: 1em;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.30/angular.min.js"></script>
+<script type="text/javascript">
+	function MyController($scope) {
+		$scope.names = [
+
+
+
+'Division - 1  Grand Marshals: Brigadier General Shawn O’Brien and Sgt. Ryan Lapointe,Dick Patten',
+'Division - 1  Marine Corps League,Cody Dumont',
+'Division - 1  Civil Air Patrol,Lt Col Darin Ninness',
+'Division - 1  [Any Additional Unregistered Military Here],',
+'Division - 1  Concord Christian Academy,Dean Whiteway',
+'Division - 1  New Hampshire Patriot Guard Riders,Brad Topoloewski',
+'Division - 1  Merrimack Valley Military Vehicle Collectors,Jim Miller',
+'Division - 1  Concord Fire Department,Dan Andrus',
+'Division - 1  Canterbury Fire and Rescue,Cheif Guy Newbery',
+'Division - 1  Bow Fire Department,Michael Van Dyke',
+'Division - 1  Pembroke Fire Dept,Stephen Ludwick',
+'Division - 1  Penacook Rescue Squad,Kevin tucker',
+'Division - 1  [Any Additional Unregistered Fire & Rescue Here]',
+'Division - 1  Merrimack County Department of Corrections Honor Guard,Kraig Emery',
+'Division - 1  "[Any Additional Unregistered Sherrif, Police, Corrections Entries Here]"',
+'Division - 1  Governor Chris Sununu,',
+'Division - 1  Concord City Councilors,',
+'Division - 1  [Any Additional Unregistered Political Figures Here],',
+'Division - 2  Concord High School Marching Band,Gabriel Cohen',
+'Division - 2  Make-A-Wish New Hampshire,Donna Parker',
+'Division - 2  Cub Scout Pack 88,George Skafidas',
+'Division - 2  Cubscout Pack 89 Concord NH,Amber Pelletier',
+'Division - 2  Barnstead Girl Scout Troop 10340,Kim Charity',
+'Division - 2  Boys and Girls Club of Central NH,Rebecca Anderson',
+'Division - 2  Head 2 Toe Learning Center and Rumford Learning Center,Deb Follansbee',
+'Division - 2  Geoffrey and his Toys R Us family ,Kelly inselman ',
+'Division - 2  Merrimack Valley High School Marching Band,Margaret Oswald',
+'Division - 2  Salvation Army,',
+'Division - 2  F.W. Webb and Frank Webb Home,Michele French',
+'Division - 2  Fight For Tosh,Breanna ',
+'Division - 2  Hearts for Kindness,Brenda Perkins',
+'Division - 3  One Main Financial,Nicholas Hayes',
+'Division - 2  Steve DeMasco\'s Martial Arts,Tim Bourrie',
+'Division - 2  Bishop Brady Band,Ben Greene',
+'Division - 2  Pleasant View Retirement,Mary Ladd',
+'Division - 2  Hair Cuttery,Tiffany Doucet',
+'Division - 2  "Miss Capital Area 2018, Kaitlin Soucy",Michele Hanson',
+'Division - 2  "Miss Liberty 2018, Kaley Missert and Miss Liberty\'s Outstanding Teen 2018 Olivia Corliss",Michele Hanson',
+'Division - 2  Miss Merrimack 2018  - Brooke Mills,Stephanie Mills',
+'Division - 2  Vibes of Style #hiphopchristmas,Shamecca Brown',
+'Division - 2  Concord Capitols Football & Cheer,Jen diachenko',
+'Division - 2  Papa John\'s,Sherry Pratt',
+'Division - 2  Ceaser Chimney Service,Holly Ceaser',
+'Division - 2  Belanger 4 Congress,Brian Belanger',
+'Division - 2  TITLE Boxing Club,Nikki Ladd',
+'Division - 2  Cheer Storm Elite,Jen Scheer',
+'Division - 2  Red Arrow Diner,Dave Mcclellan',
+'Division - 2  Binnie Media/ NH1,Nazzy',
+'Division - 2  Concord Community TV ,Doris Ballard',
+'Division - 2  "[Any Additional Unregistered Radio, TV, and Media Entries Here]"',
+'Division - 3  NV Dance Productions,Miranda Milano',
+'Division - 3  Bektash Shriners,',
+'Division - 3  Allenstown NH Historical Society,Armand Verville',
+'Division - 3  Squad 51 Replica,Ron Morin',
+'Division - 3  Antique 1985 Chevy Chesterfield NH Fire Truck,David Burbank',
+'Division - 3  Antique 1949 Mack Pumper Firetruck,Anne Mattice',
+'Division - 3  Lonewolf Cruisers - Antique Cars,',
+'Division - 3  [Any Additional Unregistered Antique Vehicles Here]',
+'Division - 3  Heritage Harley-Davidson,Ryan Jelley',
+'Division - 3  Amoskeag Beverages LLC,Noah Thompson',
+'Division - 3  In The Field Irish Dancers,Jean Ver Hoeven',
+'Division - 3  WICX 102.7 FM LP,Mike Bellino',
+'Division - 3  Church of Jesus Christ of Latter Day Saints,Sister Pearce',
+'Division - 3  Grace Capital Church,Richie Cayabyab',
+'Division - 3  West Church UCC,John D. Hutchinson',
+'Division - 3  [Any Additional Unregistered Church Entries Here],',
+'Division - 3  Concord Dance Academy,Cindy Flanagan. ',
+'Division - 3  VCA Animal Hospitals,Shannon Winn',
+'Division - 3  Pope Memorial SPCA of Concord,Shannon Camara',
+'Division - 3  Suncook River Veterinary Clinic,Jessica Griebler',
+'Division - 3  St Andrew\'s Society Kilted Color Guard,Ryan Bartlett',
+'Division - 3  New Hampshire Pipes and Drums Band,Donald Taylor',
+'Division - 3  Irving Energy,Jessica Philbrick',
+'Division - 3  Granite State Off Road,Richard Roberts',
+'Division - 3  Bow Highway Dept,Tim or Corey',
+'Division - 3  "[Any Additional Unregistered Highway Department, Tractors, or Off-road Vehicles Here]",',
+'Division - 3  Roller Derby Girls,Kelly Bennett',
+'Division - 3  Veterans Furniture,John Cusano',
+'Division - 3  Ann Marie Trench,Ann Marie Trench',
+'Division - 3  Cindy Dahood,Cindy Dahood',
+'Division - 3  Aubrey Meyveagaci / Grafton Family Riding Club,Karla Champney',
+'Division - 3  "Live and Let Live Farm, Chichester, NH",Terry Penny',
+'Division - 3  [Any Additional Unregistered Animal Entries Here],',
+'Division - 3  Santa Claus Float,James Cusano',
+
+
+		];
+	}
+
+</script>
+
+</head>
+<body>
+
+	<!-- 	<p>Nothing here {{'yet' + '!'}}</p> -->
+	<div class="container">
+		<div class="col-md-12 text-center">
+			<a href="#" data-toggle="modal" data-target="#myModal"><img src="map-small.png" alt="small map click to enlarge" class="img-responsive block margin-auto"></a>
+			
+
+		</div>
+
+	</div>
+	<div class="container-fluid">
+
+		<div class="row">		
+
+			<div class="col-md-12">
+				
+				<div ng-app>
+					<div ng-controller="MyController">
+						<input class="search" type="search" ng-model="search" placeholder="Type your entry name here...">
+						<p class="text-center">Tip: You can also search by contact person or division number.</p> 
+						<ul class="list-unstyled">
+							<li ng-repeat="name in names | filter:search">
+								{{ name }}
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		
+	</div>
+
+
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+				</div>
+				<div class="modal-body">
+					<img src="parade-divisions-map.jpg" alt="Map of the parade divisions" class="img-responsive">
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
